@@ -22,7 +22,6 @@ header{height:72px;background:#fff;border-bottom:1px solid var(--line);position:
 .actions button{border:1px solid var(--line);background:#fff;border-radius:8px;padding:9px 12px}
 .actions .post{background:var(--y);border-color:var(--y);font-weight:800}
 .menu{display:none;margin-left:auto;border:0;background:transparent;font-size:25px}
-.header-phone{display:flex;align-items:center;gap:6px;color:var(--g);font-weight:800;font-size:14px;white-space:nowrap;margin-right:4px}.header-phone span{font-size:16px}.hero-offer{display:inline-flex;align-items:center;gap:9px;margin:0 0 16px;background:linear-gradient(90deg,#fdc200,#ffd84d);color:#163b2e;border-radius:999px;padding:9px 16px;font-size:14px;font-weight:900;box-shadow:0 8px 18px rgba(0,0,0,.18);letter-spacing:.1px}.hero-offer b{font-size:18px}.hero-offer small{font-size:11px;font-weight:800;color:#31534a}.offer-mobile{display:none}
 
 .hero{color:#fff;padding:52px 0 34px;min-height:430px;background:linear-gradient(90deg,rgba(0,62,44,.96),rgba(0,90,63,.82),rgba(0,62,44,.62)),url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85") center/cover}
 .hero h1{font-size:50px;line-height:1.05;margin:0 0 13px;letter-spacing:-1px}.hero p{font-size:17px;margin:0 0 22px}
@@ -82,7 +81,7 @@ footer{background:var(--g);color:#fff;padding:42px 0 18px}.foot{display:grid;gri
 }
 
 @media(max-width:1000px){.navlinks{gap:12px}.cards{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:repeat(3,1fr)}.why{grid-template-columns:repeat(2,1fr)}.foot{grid-template-columns:repeat(3,1fr)}.search{grid-template-columns:1fr 1fr}.field:nth-child(2){border-right:0}.field:nth-child(3),.field:nth-child(4){border-top:1px solid var(--line)}.search button{min-height:45px}}
-@media(max-width:720px){.navlinks,.actions .login,.header-phone{display:none}.menu{display:block}.logo{width:130px}.hero h1{font-size:38px}.search{grid-template-columns:1fr}.field{border-right:0!important;border-bottom:1px solid var(--line);padding:11px}.field:last-of-type{border-bottom:0}.trust{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}.categories{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr}.foot{grid-template-columns:1fr 1fr}.detailgrid{grid-template-columns:1fr}.info{position:static}.details-table{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.thumbs{grid-template-columns:repeat(4,1fr)}.mainphoto{height:300px}}
+@media(max-width:720px){.navlinks,.actions .login{display:none}.menu{display:block}.logo{width:130px}.hero h1{font-size:38px}.search{grid-template-columns:1fr}.field{border-right:0!important;border-bottom:1px solid var(--line);padding:11px}.field:last-of-type{border-bottom:0}.trust{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}.categories{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr}.foot{grid-template-columns:1fr 1fr}.detailgrid{grid-template-columns:1fr}.info{position:static}.details-table{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.thumbs{grid-template-columns:repeat(4,1fr)}.mainphoto{height:300px}}
 @media(max-width:450px){.trust{grid-template-columns:1fr}.foot{grid-template-columns:1fr}}
 
 .live-sheet-bar{
@@ -138,7 +137,7 @@ footer{background:var(--g);color:#fff;padding:42px 0 18px}.foot{display:grid;gri
 <a href="#footer">About Us</a>
 <a href="#footer">Contact</a>
 </nav>
-<div class="actions"><div class="header-phone"><span>☎</span> 72006 86551</div><button aria-label="Saved properties">♡</button><button class="login" id="login">♙ Login</button><button class="post" id="post">＋ Post Property</button></div>
+<div class="actions"><button aria-label="Saved properties">♡</button><button class="login" id="login">♙ Login</button><button class="post" id="post">＋ Post Property</button></div>
 <button class="menu">☰</button>
 </div>
 </header>
@@ -146,7 +145,7 @@ footer{background:var(--g);color:#fff;padding:42px 0 18px}.foot{display:grid;gri
 <div class="home">
 <section class="hero">
 <div class="container">
-<div class="hero-offer">🪙 <b>FREE GOLD COIN</b><span>on every purchase</span></div><h1>Find a property<br>you’ll love.</h1><p>Buy, Rent or Commercial – We make it simple.</p>
+<h1>Find a property<br>you’ll love.</h1><p>Buy, Rent or Commercial – We make it simple.</p>
 <div class="mode-label">Search properties for</div>
 <div class="tabs" role="tablist" aria-label="Property purpose">
   <button type="button" class="tab active" data-mode="Buy">⌂ &nbsp;Buy</button>
@@ -229,7 +228,6 @@ footer{background:var(--g);color:#fff;padding:42px 0 18px}.foot{display:grid;gri
 <div><label>Listing Type<select name="mode" id="postMode" required><option value="">Select</option><option>Buy</option><option>Rent</option><option>Commercial</option></select></label></div>
 <div><label>Property Type<select name="type" required><option value="">Select</option><option>Apartment</option><option>Villa</option><option>Independent House</option><option>Plot</option><option>Commercial Building</option><option>Office</option><option>Shop</option></select></label></div>
 <div><label>Price / Rent<input name="price" required placeholder="₹"></label></div>
-<div><label>Area (sq.ft)<input name="area" required placeholder="e.g. 1200"></label></div>
 <div><label>Location<select name="location" required><option value="">Select location</option><option>Avadi</option><option>Thirunindravur</option><option>Thirumalisai</option><option>Vepampattu</option><option>Thiruvallur</option><option>Sevaipettai</option><option>Thamaraipakkam</option></select></label></div>
 <div class="full">
 <label>Property Images</label>
@@ -402,7 +400,6 @@ document.getElementById("postPropertyForm").addEventListener("submit",async e=>{
  const sheetUrl=document.getElementById("googleSheetUrl")?.value.trim() || localStorage.getItem(sheetUrlKey) || "";
  if(sheetUrl) setSheetUrl(sheetUrl);
 
- const mainImage = await readFileAsDataURL(selectedImages[0]);
  const property={
    submittedAt:new Date().toLocaleString("en-IN"),
    name:form.elements.name.value.trim(),
@@ -411,53 +408,31 @@ document.getElementById("postPropertyForm").addEventListener("submit",async e=>{
    mode:form.elements.mode.value,
    type:form.elements.type.value,
    price:form.elements.price.value.trim(),
-   area:form.elements.area.value.trim(),
    location:form.elements.location.value,
    description:form.elements.description.value.trim(),
-   imageCount:selectedImages.length,
-   image:mainImage
+   imageCount:selectedImages.length
  };
 
- /* Add instantly to the visible featured property list. */
- const suffix = property.mode==="Rent" ? "/ month" : (property.type==="Plot" ? "/ sq.ft" : "");
- const meta = [property.area ? property.area+" sq.ft" : "", property.type].filter(Boolean).join(" • ");
- data.unshift([property.title, property.location+(property.location.includes("Chennai")?"":", Chennai"), meta, property.price, suffix, mainImage, property.mode || "Buy"]);
- render(data);
- filterProperties();
-
  submissions.push(property);
- try{
-   localStorage.setItem(submissionKey,JSON.stringify(submissions));
- }catch(storageErr){
-   console.warn("Local storage full. Property is still visible in this session.", storageErr);
- }
+ localStorage.setItem(submissionKey,JSON.stringify(submissions));
 
  let synced=false;
- if(sheetUrl) synced=await pushPropertyToGoogleSheet({...property,image:""});
+ if(sheetUrl) synced=await pushPropertyToGoogleSheet(property);
 
  selectedImages=[];
  renderImagePreviews();
  form.reset();
  closeModal();
- document.getElementById("properties").scrollIntoView({behavior:"smooth"});
 
  if(sheetUrl && synced){
-   alert("Property added successfully to the featured list and saved to Google Sheet.");
+   alert("Property submitted and added to the connected Google Sheet.");
+   await syncFromGoogleSheet();
  }else if(sheetUrl){
-   alert("Property added to the featured list and saved locally, but Google Sheet sync failed. Check the Web App URL.");
+   alert("Property was saved locally, but could not be sent to Google Sheet. Check the Web App URL.");
  }else{
-   alert("Property added successfully to the featured list.");
+   alert("Property saved locally. Add a Google Apps Script Web App URL to enable live Google Sheet sync.");
  }
 });
-
-function readFileAsDataURL(file){
- return new Promise((resolve,reject)=>{
-   const reader=new FileReader();
-   reader.onload=()=>resolve(reader.result);
-   reader.onerror=reject;
-   reader.readAsDataURL(file);
- });
-}
 
 
 /* Property data: local fallback + optional Google Apps Script live sync */
@@ -465,20 +440,6 @@ const CONFIGURED_SHEET_URL = "https://script.google.com/macros/s/AKfycbyDyV101tS
 const submissionKey = "ungaPropertySubmissions";
 const sheetUrlKey = "ungaPropertySheetUrl";
 let submissions = JSON.parse(localStorage.getItem(submissionKey) || "[]");
-/* Restore locally posted properties into the featured list on page reload. */
-if(Array.isArray(submissions) && submissions.length){
-  const restored=submissions.slice().reverse().map((p)=>[
-    p.title || "Property",
-    (p.location || "") + ((p.location && !String(p.location).includes("Chennai")) ? ", Chennai" : ""),
-    [p.area ? p.area+" sq.ft" : "", p.type || ""].filter(Boolean).join(" • "),
-    p.price || "",
-    p.mode==="Rent" ? "/ month" : (p.type==="Plot" ? "/ sq.ft" : ""),
-    p.image || imgs[0],
-    p.mode || "Buy"
-  ]);
-  data.unshift(...restored);
-  render(data);
-}
 
 function getSheetUrl(){
   return (document.getElementById("googleSheetUrl")?.value || localStorage.getItem(sheetUrlKey) || CONFIGURED_SHEET_URL || "").trim();
@@ -497,10 +458,10 @@ function downloadPropertySpreadsheet(){
     alert("No property submissions yet.");
     return;
   }
-  const headers=["Submitted At","Name","Phone","Property Title","Listing Type","Property Type","Price / Rent","Area","Location","Description","Number of Images"];
+  const headers=["Submitted At","Name","Phone","Property Title","Listing Type","Property Type","Price / Rent","Location","Description","Number of Images"];
   const rows=submissions.map(item=>[
     item.submittedAt,item.name,item.phone,item.title,item.mode,item.type,
-    item.price,item.area || "",item.location,item.description,item.imageCount
+    item.price,item.location,item.description,item.imageCount
   ]);
   const csv="\uFEFF"+[headers,...rows].map(row=>row.map(escapeCSV).join(",")).join("\r\n");
   const blob=new Blob([csv],{type:"text/csv;charset=utf-8;"});
