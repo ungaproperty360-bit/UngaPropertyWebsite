@@ -25,30 +25,106 @@ function upLocationMatches(q){
     .sort((a,b)=>a.score-b.score || a.d-b.d || a.name.localeCompare(b.name))
     .filter((o,i,arr)=>x.length<=2 ? o.name.toLowerCase().startsWith(x) : i<10).map(o=>o.name);
 }
+let UP_SELECTED_LOCATIONS = [];
+function upSyncLocationInput(input){
+  input.value = UP_SELECTED_LOCATIONS.join(", ");
+  input.setAttribute("aria-label", UP_SELECTED_LOCATIONS.length
+    ? `Selected locations: ${UP_SELECTED_LOCATIONS.join(", ")}`
+    : "Select or enter location");
+  const chips=document.getElementById("locationChips");
+  if(chips){
+    chips.innerHTML = UP_SELECTED_LOCATIONS.length
+      ? UP_SELECTED_LOCATIONS.map((name,i)=>`<span class="location-chip" data-location-index="${i}"><span class="location-chip-name">${name}</span><button type="button" class="location-chip-remove" aria-label="Remove ${name}" title="Remove ${name}">×</button></span>`).join("")
+      : '<span class="location-placeholder">Select or enter location</span>';
+  }
+}
 function setupLocationSuggest(inputId,suggestId){
   const input=document.getElementById(inputId), box=document.getElementById(suggestId);
+  const toggle=document.getElementById("locationToggle");
+  const wrap=document.getElementById("locationInputWrap");
   if(!input||!box)return;
-  function draw(){
-    const matches=upLocationMatches(input.value);
-    box.innerHTML=matches.map(name=>`<button type="button" role="option">${name}</button>`).join("");
-    box.classList.toggle("open",matches.length>0 && document.activeElement===input);
-    box.querySelectorAll("button").forEach(btn=>btn.onclick=()=>{
-      input.value=btn.textContent; box.classList.remove("open"); input.dispatchEvent(new Event("change",{bubbles:true}));
+
+  function setOpen(open){
+    box.classList.toggle("open",open);
+    input.closest(".location-field")?.classList.toggle("location-open",open);
+    if(toggle){
+      toggle.textContent=open?"⌃":"⌄";
+      toggle.setAttribute("aria-expanded",String(open));
+      toggle.setAttribute("aria-label",open?"Close location options":"Open location options");
+    }
+  }
+
+  function draw(forceOpen=true){
+    const matches=upLocationMatches(UP_SELECTED_LOCATIONS.length ? "" : input.value);
+    const maxReached=UP_SELECTED_LOCATIONS.length>=3;
+    box.innerHTML = `
+      <div class="location-select-help">Select up to 3 locations</div>
+      ${matches.map(name=>{
+        const selected=UP_SELECTED_LOCATIONS.includes(name);
+        const disabled=maxReached && !selected;
+        return `<button type="button" role="option" aria-selected="${selected}" class="${selected?"active":""} ${disabled?"disabled":""}" ${disabled?"disabled":""}>
+          <span>${name}</span><span class="location-check">${selected?"✓":""}</span>
+        </button>`;
+      }).join("")}`;
+    if(forceOpen && matches.length) setOpen(true);
+
+    box.querySelectorAll("button[role=option]").forEach(btn=>btn.onclick=()=>{
+      const name=btn.querySelector("span")?.textContent?.trim();
+      if(!name)return;
+      const idx=UP_SELECTED_LOCATIONS.indexOf(name);
+      if(idx>=0){
+        UP_SELECTED_LOCATIONS.splice(idx,1);
+      }else if(UP_SELECTED_LOCATIONS.length<3){
+        UP_SELECTED_LOCATIONS.push(name);
+      }
+      upSyncLocationInput(input);
+      input.dispatchEvent(new Event("change",{bubbles:true}));
+      draw(true);
     });
   }
-  input.addEventListener("focus",draw); input.addEventListener("input",draw);
-  input.addEventListener("keydown",e=>{
-    if(e.key==="Escape")box.classList.remove("open");
-    if(e.key==="Enter"){
-      const first=box.querySelector("button");
-      if(first && box.classList.contains("open") && input.value.trim()!==first.textContent.trim()){
-        e.preventDefault(); first.click();
+
+  input.addEventListener("focus",()=>draw(true));
+  input.addEventListener("click",()=>draw(true));
+  wrap?.addEventListener("click",e=>{
+    const remove=e.target.closest(".location-chip-remove");
+    if(remove){
+      e.preventDefault();
+      e.stopPropagation();
+      const chip=remove.closest(".location-chip");
+      const idx=Number(chip?.dataset.locationIndex);
+      if(Number.isInteger(idx) && idx>=0 && idx<UP_SELECTED_LOCATIONS.length){
+        UP_SELECTED_LOCATIONS.splice(idx,1);
+        upSyncLocationInput(input);
+        input.dispatchEvent(new Event("change",{bubbles:true}));
+        draw(true);
       }
+      return;
+    }
+    input.focus();
+    draw(true);
+  });
+  input.addEventListener("keydown",e=>{
+    if(e.key==="Escape"){setOpen(false);return;}
+    if(e.key==="Backspace" && !input.value.trim() && UP_SELECTED_LOCATIONS.length){
+      UP_SELECTED_LOCATIONS.pop();
+      upSyncLocationInput(input);
+      input.dispatchEvent(new Event("change",{bubbles:true}));
+      draw(true);
     }
   });
-  document.addEventListener("click",e=>{if(!box.contains(e.target)&&e.target!==input)box.classList.remove("open")});
+  toggle?.addEventListener("click",e=>{
+    e.preventDefault();
+    e.stopPropagation();
+    if(box.classList.contains("open")) setOpen(false);
+    else { input.focus(); draw(true); }
+  });
+  document.addEventListener("click",e=>{
+    if(!box.contains(e.target) && e.target!==input && e.target!==toggle && !wrap?.contains(e.target)) setOpen(false);
+  });
 }
+
 setupLocationSuggest("location","locationSuggestions");
+upSyncLocationInput(document.getElementById("location"));
 
 /* Match every hero dropdown to the Location dropdown style. */
 function setupHeroSelects(){
@@ -190,13 +266,15 @@ document.getElementById("resetAllFilters")?.addEventListener("click",()=>{
 document.getElementById("allPropertiesModal")?.addEventListener("click",e=>{if(e.target.id==="allPropertiesModal")closeAllProperties();});
 
 function upSearchFilter(){
-  const loc=upNormalize(document.getElementById("location").value);
+  const selectedLocs=UP_SELECTED_LOCATIONS.map(upNormalize).filter(Boolean);
+  const typedLoc=upNormalize(document.getElementById("location").value);
+  const locs=selectedLocs.length ? selectedLocs : (typedLoc ? [typedLoc] : []);
   const type=document.getElementById("type").value;
   const budget=document.getElementById("budget").value;
   const bhk=document.getElementById("bhk").value;
   let results=data.filter(p=>{
     const modeOK=currentMode==="Buy" ? (p[6]==="Buy" || p[6]==="Rent") : p[6]===currentMode;
-    const locationOK=!loc||upNormalize(p[1]).includes(loc)||upNormalize(p[0]).includes(loc);
+    const locationOK=!locs.length||locs.some(loc=>upNormalize(p[1]).includes(loc)||upNormalize(p[0]).includes(loc));
     const typeOK=!type||upType(p)===type;
     const bhkOK=!bhk||(bhk==="4"?upBhk(p)>=4:upBhk(p)===parseInt(bhk,10));
     return modeOK&&locationOK&&typeOK&&upMatchesBudget(p,budget)&&bhkOK;
@@ -347,3 +425,64 @@ window.addEventListener("load",initGoogleLogin);
 
 /* Ensure service cards have no icon and all phone links are callable. */
 document.querySelectorAll(".header-phone a").forEach(a=>a.setAttribute("href","tel:+917200686551"));
+
+/* Final owner-only spreadsheet visibility. Static front-end recognition; use real server auth for production security. */
+const OWNER_IDS=["ungaproperty360@gmail.com","9894252417","9566050017","+919894251017","+919566050017"];
+function isOwnerIdentity(session){
+ if(!session)return false;
+ const vals=[session.username,session.email,session.phone].filter(Boolean).map(v=>String(v).toLowerCase().replace(/\s+/g,""));
+ return vals.some(v=>OWNER_IDS.includes(v));
+}
+function updateOwnerControls(){
+ const session=JSON.parse(localStorage.getItem("ungaPropertySession")||"null");
+ const owner=isOwnerIdentity(session);
+ document.querySelectorAll(".owner-only").forEach(el=>el.classList.toggle("owner-visible",owner));
+}
+const _oldUpdateAuthUI=window.updateAuthUI;
+if(typeof _oldUpdateAuthUI==="function"){
+ const original=window.updateAuthUI;
+ window.updateAuthUI=function(){original();updateOwnerControls();};
+}
+updateOwnerControls();
+
+/* Seed owner role when a recognised owner identifier logs in or signs up. */
+const _loginForm=document.getElementById("loginForm");
+_loginForm?.addEventListener("submit",()=>setTimeout(()=>{
+ const s=JSON.parse(localStorage.getItem("ungaPropertySession")||"null"); if(s&&isOwnerIdentity(s)){s.role="owner";localStorage.setItem("ungaPropertySession",JSON.stringify(s));updateOwnerControls();}
+},650));
+const _signupForm=document.getElementById("signupForm");
+_signupForm?.addEventListener("submit",()=>setTimeout(()=>{
+ const s=JSON.parse(localStorage.getItem("ungaPropertySession")||"null"); if(s&&isOwnerIdentity(s)){s.role="owner";localStorage.setItem("ungaPropertySession",JSON.stringify(s));updateOwnerControls();}
+},1000));
+
+/* Search options: Any Property always first; rent removes Plot and uses monthly rent budgets. */
+function refreshHeroSearchOptions(){
+ const typeWrap=document.querySelector('.up-select[data-select="type"]');
+ const budgetWrap=document.querySelector('.up-select[data-select="budget"]');
+ if(!typeWrap||!budgetWrap)return;
+ const types=currentMode==="Rent"?["","Apartment","Villa","House","PG","Commercial Building","Office","Shop"]:["","Apartment","Villa","House","Plot","PG","Commercial Building","Office","Shop"];
+ const labels={"":"Any Property"};
+ const menu=typeWrap.querySelector('.up-select-menu'); const select=document.getElementById('type');
+ menu.innerHTML=types.map(v=>`<button type="button" data-value="${v}">${labels[v]||v}</button>`).join("");
+ select.innerHTML=types.map(v=>`<option value="${v}">${labels[v]||v}</option>`).join("");
+ typeWrap.querySelector('.up-select-trigger').textContent="Any Property"; select.value="";
+ const budgets=currentMode==="Rent"?[["","Any Budget"],["rent10000","Under ₹10,000"],["rent20000","Under ₹20,000"],["rent30000","Under ₹30,000"],["rent50000","Under ₹50,000"],["rent50001","Above ₹50,000"]]:[["","Any Budget"],["2000000","Under ₹20 Lakhs"],["5000000","₹20–50 Lakhs"],["10000000","₹50 Lakhs–₹1 Crore"],["10000001","Above ₹1 Crore"]];
+ const bmenu=budgetWrap.querySelector('.up-select-menu'); const bselect=document.getElementById('budget');
+ bmenu.innerHTML=budgets.map(([v,l])=>`<button type="button" data-value="${v}">${l}</button>`).join("");
+ bselect.innerHTML=budgets.map(([v,l])=>`<option value="${v}">${l}</option>`).join("");
+ budgetWrap.querySelector('.up-select-trigger').textContent="Any Budget"; bselect.value="";
+ /* rebind custom menu buttons because the original menu was rebuilt */
+ bmenu.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{bselect.value=btn.dataset.value;bmenu.parentElement.classList.remove('open');budgetWrap.querySelector('.up-select-trigger').textContent=btn.textContent.trim();bselect.dispatchEvent(new Event('change',{bubbles:true}));}));
+ menu.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{select.value=btn.dataset.value;menu.parentElement.classList.remove('open');typeWrap.querySelector('.up-select-trigger').textContent=btn.textContent.trim();select.dispatchEvent(new Event('change',{bubbles:true}));}));
+}
+document.querySelectorAll('.tabs .tab').forEach(t=>t.addEventListener('click',()=>setTimeout(refreshHeroSearchOptions,0)));
+refreshHeroSearchOptions();
+const _oldUpMatchesBudget=upMatchesBudget;
+upMatchesBudget=function(p,limit){
+ if(String(limit).startsWith('rent')){
+   const n=parseFloat(String(p[3]||'').replace(/[^\d.]/g,''))||0;
+   const threshold={rent10000:10000,rent20000:20000,rent30000:30000,rent50000:50000,rent50001:50000}[limit];
+   return limit==='rent50001'?n>50000:n>0&&n<=threshold;
+ }
+ return _oldUpMatchesBudget(p,limit);
+};
