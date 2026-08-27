@@ -434,3 +434,13 @@ header .logo{
 .location-chip-name{white-space:nowrap}
 .location-chip-remove{width:20px!important;height:20px!important;min-width:20px!important;padding:0!important;border:0!important;border-radius:50%!important;background:transparent!important;color:var(--muted)!important;font-size:17px!important;font-weight:700!important;line-height:18px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;cursor:pointer!important;box-shadow:none!important}
 .location-chip-remove:hover,.location-chip-remove:focus{background:#e3eae7!important;color:var(--ink)!important;outline:none!important}
+.phone-icon {
+    width: 20px !important;
+    height: 20px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+}
