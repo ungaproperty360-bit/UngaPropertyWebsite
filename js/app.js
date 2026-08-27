@@ -119,7 +119,6 @@ function openModal(){document.getElementById("modal").classList.add("open")}
 function closeModal(){document.getElementById("modal").classList.remove("open")}
 document.getElementById("post").onclick=openModal;
 document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
-document.getElementById("login").onclick=()=>alert("Demo login — connect this to your authentication system.");
 
 document.querySelectorAll(".tab").forEach(t=>t.addEventListener("keydown",e=>{
  if(e.key==="Enter"||e.key===" "){e.preventDefault();t.click();}
