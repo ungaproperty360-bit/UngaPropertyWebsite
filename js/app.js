@@ -18,6 +18,14 @@ const data=[
  ["images/properties/Bala-Kumaran-Nagar.webp","images/properties/bala-2.webp","images/properties/bala-3.webp","images/properties/bala-4.webp","images/properties/bala-5.jpg"],
  "Premium villa plot at Bala Kumaran Nagar, Thirunindravur, with developed roads and residential surroundings.",
  {"Property Type":"Plot","Property Age":"New","Status":"Available","Location":"Thirunindravur"},"Thirunindravur, Chennai"]
+ ["VR Westgate Premium residential plots","Thirunindravur, Chennai","850 - 1757 sq.ft • Plot","₹3,500","/ sq.ft","images/properties/westgate-1.jpg","Buy",
+["images/properties/westgate-1.jpg","images/properties/westgate-2.jpg","images/properties/westgate-3.jpg","images/properties/westgate-4.jpg","images/properties/westgate-5.jpg","images/properties/westgate-6.jpg"],
+"VR Westgate is a premium CMDA & RERA approved gated community plotted development by VR Foundation, strategically located in Thiruninravur, West Chennai. 80% of the plots are already sold. Phase 2 launching soon!",
+{"Property Type":"Plot","Area":"850 - 1757 sq.ft","Property Age":"New","Status":"Available","Approval":"CMDA & RERA Approved","Development":"Gated Community","Other Details":"Grand Entrance arch, Black top road, street light, Avenue trees and landscaping, plot number board, EB poles, Fully Compounded, School and Hospital connectivity"},"Thirunindravur, Chennai"],
+["SRI Balaji Nagar Extension","Tamaraipakkam to Tiruvallur Road","800 - 1600 sq.ft • Villa Plot","₹1,499","/ sq.ft","images/properties/balaji-nagar-1.jpg","Buy",
+["images/properties/balaji-nagar-1.jpg","images/properties/balaji-nagar-2.jpg","images/properties/balaji-nagar-3.jpg","images/properties/balaji-nagar-4.jpg","images/properties/balaji-nagar-5.jpg"],
+"Plots on Tamaraipakkam to Tiruvallur Road give you dream home or high-growth land. DTCP approved layout with clear title, right where Tiruvallur city is expanding. Fast appreciation with new infra + residential projects coming up.",
+{"Property Type":"Villa Plot","Area":"800 - 1600 sq.ft","Property Age":"New","Status":"Available","Approval":"DTCP Approved","Other Details":"10 min from Tiruvallur Bus Stand & Railway Station, Immediate registration + patta, Blacktop roads, street lights, drainage, Near schools, colleges, SIPCOT, Perfect for home + investment"},"Tamaraipakkam, Tiruvallur"],
 ];
 
 let currentMode="Buy";
