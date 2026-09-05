@@ -31,7 +31,7 @@ const data=[
 let currentMode="Buy";
 
 function card(p,i){
-  if(!p) return "";
+  if(!Array.isArray(p)) return "";
  const priceBlock=p[3] ? `<div class="price">${p[3]} <small>${p[4]||''}</small></div>` : '';
  return `<article class="card" onclick="showDetail(${i})">
  <div class="pic" style="background-image:url('${p[5]}')">
@@ -43,9 +43,17 @@ function card(p,i){
 }
 
 function render(list=data){
- document.getElementById("cards").innerHTML=list.map(card).join("");
- document.getElementById("similar").innerHTML=data.filter((_,i)=>i!==1).map(card).join("");
+  const safeList = (list || []).filter(p => Array.isArray(p));
+
+  document.getElementById("cards").innerHTML =
+    safeList.map((p,i) => card(p,i)).join("");
+
+  document.getElementById("similar").innerHTML =
+    safeList.filter((_,i) => i !== 1)
+            .map((p,i) => card(p,i))
+            .join("");
 }
+
 render();
 
 document.querySelectorAll(".tabs .tab").forEach(tab=>{
