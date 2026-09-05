@@ -102,6 +102,7 @@ document.getElementById("searchForm").addEventListener("submit",e=>{
 });
 
 function showDetail(index=0){
+ document.getElementById("allPropertiesModal")?.classList.remove("open");
  const p=data[index] || data[0];
  document.querySelector(".home").classList.add("hidden");
  document.querySelector(".detail").classList.add("active");
