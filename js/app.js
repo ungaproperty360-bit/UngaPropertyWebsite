@@ -31,6 +31,7 @@ const data=[
 let currentMode="Buy";
 
 function card(p,i){
+  if(!p) return "";
  const priceBlock=p[3] ? `<div class="price">${p[3]} <small>${p[4]||''}</small></div>` : '';
  return `<article class="card" onclick="showDetail(${i})">
  <div class="pic" style="background-image:url('${p[5]}')">
