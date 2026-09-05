@@ -50,7 +50,7 @@ function render(list=data){
 
   document.getElementById("similar").innerHTML =
     safeList.filter((_,i) => i !== 1)
-            .map((p,i) => card(p,i))
+            .map(p => card(p,data.indexOf(p)))
             .join("");
 }
 
