@@ -102,8 +102,9 @@ document.getElementById("searchForm").addEventListener("submit",e=>{
 });
 
 function showDetail(index=0){
- document.getElementById("allPropertiesModal")?.classList.remove("open");
- const p=data[index] || data[0];
+  document.getElementById("allPropertiesModal")?.classList.remove("open");
+  history.pushState({page:"property", index:index}, "", "#property-" + index);
+  const p=data[index] || data[0];
  document.querySelector(".home").classList.add("hidden");
  document.querySelector(".detail").classList.add("active");
  window.scrollTo({top:0,behavior:"smooth"});
@@ -132,6 +133,9 @@ function showHome(){
  document.querySelector(".detail").classList.remove("active");
  window.scrollTo({top:0,behavior:"smooth"});
 }
+window.addEventListener("popstate", function(){
+  showHome();
+});
 
 function openModal(){document.getElementById("modal").classList.add("open")}
 function closeModal(){document.getElementById("modal").classList.remove("open")}
