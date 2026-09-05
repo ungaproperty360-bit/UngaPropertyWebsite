@@ -17,7 +17,7 @@ const data=[
 ["Bala Kumaran Nagar – Premium villa plot","Thirunindravur, Chennai, Tamil Nadu","Plot • Posted recently","₹2,800","/ Sq.Ft","images/properties/Bala-Kumaran-Nagar.webp","Buy",
  ["images/properties/Bala-Kumaran-Nagar.webp","images/properties/bala-2.webp","images/properties/bala-3.webp","images/properties/bala-4.webp","images/properties/bala-5.jpg"],
  "Premium villa plot at Bala Kumaran Nagar, Thirunindravur, with developed roads and residential surroundings.",
- {"Property Type":"Plot","Property Age":"New","Status":"Available","Location":"Thirunindravur"},"Thirunindravur, Chennai"]
+ {"Property Type":"Plot","Property Age":"New","Status":"Available","Location":"Thirunindravur"},"Thirunindravur, Chennai"],
  ["VR Westgate Premium residential plots","Thirunindravur, Chennai","850 - 1757 sq.ft • Plot","₹3,500","/ sq.ft","images/properties/westgate-1.jpg","Buy",
 ["images/properties/westgate-1.jpg","images/properties/westgate-2.jpg","images/properties/westgate-3.jpg","images/properties/westgate-4.jpg","images/properties/westgate-5.jpg","images/properties/westgate-6.jpg"],
 "VR Westgate is a premium CMDA & RERA approved gated community plotted development by VR Foundation, strategically located in Thiruninravur, West Chennai. 80% of the plots are already sold. Phase 2 launching soon!",
