@@ -95,6 +95,47 @@ const data=[
 
   "Keelkodungalur Junction, Tiruvannamalai District, Tamil Nadu"
 ], 
+[
+  "GREEN COVE – SHOLAVARAM",
+  "GNT Road, Sholavaram, Chennai, Tamil Nadu",
+  "542 - 1242 sq.ft • Villa Plots",
+  "₹4,300",
+  "/ sq.ft onwards",
+  "images/properties/green-cove-1.jpg",
+  "Buy",
+
+  [
+    "images/properties/green-cove-1.jpg",
+    "images/properties/green-cove-2.jpg",
+    "images/properties/green-cove-3.jpg",
+    "images/properties/green-cove-4.jpg",
+    "images/properties/green-cove-5.jpg"
+  ],
+
+  "Premium villa plots on GNT Road, Sholavaram — a well-connected and high appreciation zone. Green Cove offers a gated community with CMDA & RERA approved layout, wide black-top internal roads, avenue plantation, landscaped parks, street lights, clear title and easy bank loan facility.",
+
+  {
+    "Property Type":"Premium Villa Plots",
+    "Residential Plot Size":"542 - 1242 sq.ft",
+    "Residential Price":"Starts from ₹4,300 / sq.ft + PLC",
+    "Commercial Plot Size":"8,500 - 13,800 sq.ft",
+    "Commercial Price":"Starts from ₹6,500 / sq.ft",
+    "Approval":"CMDA & RERA Approved",
+    "Community":"Gated Community with Security",
+    "Roads":"Wide Black-Top Internal Roads",
+    "Landscaping":"Avenue Plantation & Landscaped Parks",
+    "Street Lights":"Available",
+    "Title":"Clear Title",
+    "Bank Loan":"Easy Bank Loan Facility",
+    "Proposed Padinallur Toll Metro":"2.5 km",
+    "Sholavaram Bus Stand":"3 km",
+    "Sri Venkateswaraa Hospital":"3 km",
+    "Don Bosco School":"5.5 km",
+    "Hiranandani Industrial Parks":"8 km"
+  },
+
+  "Sholavaram, GNT Road, Chennai, Tamil Nadu"
+],
 ];
 
 let currentMode="Buy";
