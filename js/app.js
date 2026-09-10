@@ -72,7 +72,9 @@ const data=[
   [
     "images/properties/sri-bhuvaneswari-nagar-1.jpg",
     "images/properties/sri-bhuvaneswari-nagar-2.jpg",
-    "images/properties/sri-bhuvaneswari-nagar-3.jpg"
+    "images/properties/sri-bhuvaneswari-nagar-3.jpg",
+    "images/properties/sri-bhuvaneswari-nagar-4.jpg",
+    "images/properties/sri-bhuvaneswari-nagar-5.jpg"
   ],
 
   "RERA & DTCP Approved Residential Plots at Keelkodungalur Junction, Tiruvannamalai District — ₹699/sq.ft. A residential plot opportunity in a strategically located junction area, with a limited-period bumper offer for early buyers.",
