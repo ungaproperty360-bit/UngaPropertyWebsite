@@ -47,14 +47,14 @@ const data=[
   {
     "Property Type":"Commercial Plots / Land",
     "Total Land Area":"60,982 sq.ft",
-    "Built-up Area":"Not applicable — vacant commercial plots",
+    "Built-up Area":"vacant commercial plots",
     "Floors":"Not applicable",
     "Facing":"Not specified",
     "Road Width":"30 ft proposed internal road",
     "Highway Frontage":"Arakkonam–Sriperumbudur Highway",
     "Plot Sizes":"878 - 11,009 sq.ft",
     "Key Features":"On-road commercial plots; Mappedu Dry Port area; Chennai–Bangalore Highway connectivity; High appreciation potential; Strategic and future-ready location",
-    "Approval / Patta / EC":"Not provided — needs confirmation"
+    "Approval / Patta / EC":""
   },
 
   "Sriperumbudur, Tamil Nadu"
