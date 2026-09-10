@@ -26,6 +26,73 @@ const data=[
 ["images/properties/balaji-nagar-1.jpg","images/properties/balaji-nagar-2.jpg","images/properties/balaji-nagar-3.jpg","images/properties/balaji-nagar-4.jpg","images/properties/balaji-nagar-5.jpg"],
 "Plots on Tamaraipakkam to Tiruvallur Road give you dream home or high-growth land. DTCP approved layout with clear title, right where Tiruvallur city is expanding. Fast appreciation with new infra + residential projects coming up.",
 {"Property Type":"Villa Plot","Area":"800 - 1600 sq.ft","Property Age":"New","Status":"Available","Approval":"DTCP Approved","Other Details":"10 min from Tiruvallur Bus Stand & Railway Station, Immediate registration + patta, Blacktop roads, street lights, drainage, Near schools, colleges, SIPCOT, Perfect for home + investment"},"Tamaraipakkam, Tiruvallur"],
+[
+  "Sriperumbudur On-Road Commercial Plots",
+  "Sriperumbudur, Tamil Nadu",
+  "878 - 11,009 sq.ft • Commercial Plots",
+  "₹4,999",
+  "/ sq.ft",
+  "images/properties/sriperumbudur-commercial-1.jpg",
+  "Commercial",
+
+  [
+    "images/properties/sriperumbudur-commercial-1.jpg",
+    "images/properties/sriperumbudur-commercial-2.jpg",
+    "images/properties/sriperumbudur-commercial-3.jpg",
+    "images/properties/sriperumbudur-commercial-4.jpg"
+  ],
+
+  "Prime On-Road Commercial Plots at Sriperumbudur — ₹4,999/sq.ft. Strategically located on the Arakkonam–Sriperumbudur Highway, with excellent Chennai–Bangalore Highway connectivity and proximity to the upcoming Mappedu Dry Port, these plots are ideal for commercial, warehouse and investment purposes.",
+
+  {
+    "Property Type":"Commercial Plots / Land",
+    "Total Land Area":"60,982 sq.ft",
+    "Built-up Area":"Not applicable — vacant commercial plots",
+    "Floors":"Not applicable",
+    "Facing":"Not specified",
+    "Road Width":"30 ft proposed internal road",
+    "Highway Frontage":"Arakkonam–Sriperumbudur Highway",
+    "Plot Sizes":"878 - 11,009 sq.ft",
+    "Key Features":"On-road commercial plots; Mappedu Dry Port area; Chennai–Bangalore Highway connectivity; High appreciation potential; Strategic and future-ready location",
+    "Approval / Patta / EC":"Not provided — needs confirmation"
+  },
+
+  "Sriperumbudur, Tamil Nadu"
+],
+
+[
+  "Sri Bhuvaneswari Nagar – Residential Plots",
+  "Keelkodungalur Junction, Tiruvannamalai District, Tamil Nadu",
+  "Residential Plots • RERA & DTCP Approved",
+  "₹699",
+  "/ sq.ft onwards",
+  "images/properties/sri-bhuvaneswari-nagar-1.jpg",
+  "Buy",
+
+  [
+    "images/properties/sri-bhuvaneswari-nagar-1.jpg",
+    "images/properties/sri-bhuvaneswari-nagar-2.jpg",
+    "images/properties/sri-bhuvaneswari-nagar-3.jpg"
+  ],
+
+  "RERA & DTCP Approved Residential Plots at Keelkodungalur Junction, Tiruvannamalai District — ₹699/sq.ft onwards. A residential plot opportunity in a strategically located junction area, with a limited-period bumper offer for early buyers.",
+
+  {
+    "Property Type":"Residential Plots / Land",
+    "Land Area":"Not specified",
+    "Built-up Area":"Not applicable",
+    "Floors":"Not applicable",
+    "Facing":"Not specified",
+    "Road Width":"Not specified",
+    "Approval":"RERA & DTCP Approved",
+    "Offer":"Bumper offer — limited-period offer mentioned for 15 days",
+    "Special Offer":"Special offer for early customers",
+    "Patta / EC":"Not specified",
+    "Contact":"9787978747"
+  },
+
+  "Keelkodungalur Junction, Tiruvannamalai District, Tamil Nadu"
+], 
 ];
 
 let currentMode="Buy";
