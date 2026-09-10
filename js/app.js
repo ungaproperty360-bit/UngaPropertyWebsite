@@ -79,7 +79,7 @@ const data=[
 
   {
     "Property Type":"Residential Plots / Land",
-    "Land Area":"Not specified",
+    "Land Area":"771-1356",
     "Built-up Area":"Not applicable",
     "Floors":"Not applicable",
     "Facing":"Not specified",
