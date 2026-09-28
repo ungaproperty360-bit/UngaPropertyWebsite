@@ -171,6 +171,43 @@ const data=[
 
   "Poonamalle ORR Belt, Chennai, Tamil Nadu"
 ],
+ [
+  "PON ANANDHAM – PREMIUM VILLA PLOTS",
+  "Indra Nagar, Kanchipuram, Tamil Nadu",
+  "Premium Villa Plots • 10-Acre Gated Community",
+  "₹24 Lakhs",
+  " onwards",
+  "images/properties/pon-anandham-1.jpg",
+  "Buy",
+
+  [
+    "images/properties/pon-anandham-1.jpg",
+    "images/properties/pon-anandham-2.jpg",
+    "images/properties/pon-anandham-3.jpg",
+    "images/properties/pon-anandham-4.jpg",
+    "images/properties/pon-anandham-5.jpg"
+  ],
+
+  "Pon Anandham is a thoughtfully planned 10-Acre Gated Community in Indra Nagar, Kanchipuram, designed for those looking for a premium location, connectivity, quality infrastructure and a better lifestyle. Premium villa plots start from ₹24 Lakhs.",
+
+  {
+    "Property Type":"Premium Villa Plots",
+    "Project Area":"10 Acres",
+    "Community":"Gated Community",
+    "Price":"₹24 Lakhs onwards",
+    "Approval":"DTCP & RERA Approved",
+    "Location":"Indra Nagar, Kanchipuram",
+    "Roads":"40 / 30 / 24 Ft. Quality Blacktop Roads",
+    "Park":"17,000 sq.ft. Park",
+    "Landscaping":"Avenue Tree Plantation",
+    "Street Lights":"Solar Street Lights",
+    "Power":"EB Power Connection",
+    "Entrance":"Grand Entrance Arch",
+    "Nearby":"Kanchipuram Railway Station; Sri Shankara University; Kamakshi Amman Temple; Ekambareswarar Shiva Temple; Kanchipuram Market"
+  },
+
+  "Indra Nagar, Kanchipuram, Tamil Nadu"
+],
 ];
 
 let currentMode="Buy";
