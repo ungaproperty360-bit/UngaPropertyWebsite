@@ -136,6 +136,41 @@ const data=[
 
   "Sholavaram, GNT Road, Chennai, Tamil Nadu"
 ],
+ [
+  "GP CRESSIDA PARK",
+  "Poonamalle ORR Belt, Chennai, Tamil Nadu",
+  "620 - 2900 sq.ft • Villa Plots",
+  "₹3,199",
+  "/ sq.ft onwards",
+  "images/properties/cressida-park-1.jpg",
+  "Buy",
+
+  [
+    "images/properties/cressida-park-1.jpg",
+    "images/properties/cressida-park-2.jpg",
+    "images/properties/cressida-park-3.jpg",
+    "images/properties/cressida-park-4.jpg",
+    "images/properties/cressida-park-5.jpg"
+  ],
+
+  "GP Cressida Park is a premium villa plot development in the Poonamalle Metro-Belt on the Outer Ring Road (ORR). The project offers plot sizes from 620 sq.ft to 2,900 sq.ft, with a pre-launch offer starting at ₹3,199/sq.ft and corner plots at ₹3,499/sq.ft.",
+
+  {
+    "Property Type":"Villa Plots",
+    "Project Area":"5.7 acres",
+    "Total Plots":"140 plots",
+    "Plot Sizes":"620 - 2900 sq.ft",
+    "Pre-Launch Price":"₹3,199 / sq.ft",
+    "Corner Plot Price":"₹3,499 / sq.ft",
+    "Approval":"CMDA & RERA Approved Layout",
+    "Project Status":"Under development",
+    "Location":"ORR – Poonamalle Belt",
+    "Nemilichery Railway Station":"1 km",
+    "Pattabiram TIDEL Park":"3.4 km"
+  },
+
+  "Poonamalle ORR Belt, Chennai, Tamil Nadu"
+],
 ];
 
 let currentMode="Buy";
