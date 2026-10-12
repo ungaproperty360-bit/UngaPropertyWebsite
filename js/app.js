@@ -208,6 +208,45 @@ const data=[
 
   "Indra Nagar, Kanchipuram, Tamil Nadu"
 ],
+ [
+  "GP HOMES PONBHOOMI – SEVVAPET",
+  "Sevvapet NH Road, Tiruvallur, Tamil Nadu",
+  "450 - 3700 sq.ft • Plots & Custom Villas",
+  "₹3,199",
+  "/ sq.ft onwards",
+  "images/properties/gp-homes-ponbhoomi-1.jpg",
+  "Buy",
+
+  [
+    "images/properties/gp-homes-ponbhoomi-1.jpg",
+    "images/properties/gp-homes-ponbhoomi-2.jpg",
+    "images/properties/gp-homes-ponbhoomi-3.jpg",
+    "images/properties/gp-homes-ponbhoomi-4.jpg",
+    "images/properties/gp-homes-ponbhoomi-5.jpg"
+  ],
+
+  "GP Homes Ponbhoomi is a DTCP & RERA approved gated community on Sevvapet National Highway Road. Offering residential plots and customizable villas, the project features a developed park, 10+ amenities and a secure township setting. Plots are ready to construct, with plot budgets starting from ₹13.50 lakhs and villa budgets from ₹30 lakhs.",
+
+  {
+    "Property Type":"Residential Plots & Customizable Villas",
+    "Location":"Sevvapet National Highway Road",
+    "Plot Sizes":"450 - 3700 sq.ft",
+    "Price per sq.ft":"₹3,199 - ₹5,199",
+    "Plot Budget":"₹13.50 Lakhs onwards",
+    "Villa Budget":"₹30 Lakhs onwards",
+    "Total Project Area":"10 Acres",
+    "Park":"Around 1 Acre Developed Park",
+    "Amenities":"10+ Amenities",
+    "Approval":"DTCP & RERA Approved",
+    "Community":"Gated Community",
+    "Construction":"Plots ready to construct; customizable villas available",
+    "Connectivity":"Thirupathi Express Highway – 250 metres",
+    "CPR Road":"Within 700 metres",
+    "Project Type":"Landmark residential township"
+  },
+
+  "Sevvapet NH Road, Tiruvallur, Tamil Nadu"
+],
 ];
 
 let currentMode="Buy";
