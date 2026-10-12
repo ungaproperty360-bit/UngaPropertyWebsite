@@ -247,6 +247,40 @@ const data=[
 
   "Sevvapet NH Road, Tiruvallur, Tamil Nadu"
 ],
+ [
+  "GP AISHWARYA GARDEN 2.0 – PAKKAM",
+  "Pakkam, near Thiruninravur, Tamil Nadu",
+  "500 - 3500 sq.ft • Premium Villa Plots",
+  "₹3,200",
+  "/ sq.ft onwards",
+  "images/properties/gp-aishwarya-garden-2-1.jpg",
+  "Buy",
+
+  [
+    "images/properties/gp-aishwarya-garden-2-1.jpg",
+    "images/properties/gp-aishwarya-garden-2-2.jpg",
+    "images/properties/gp-aishwarya-garden-2-3.jpg",
+    "images/properties/gp-aishwarya-garden-2-4.jpg",
+    "images/properties/gp-aishwarya-garden-2-5.jpg"
+  ],
+
+  "GP Aishwarya Garden 2.0 is a premium plotted development in Pakkam, near Thiruninravur, along the State Highway. This 4.5-acre project offers plot sizes from 500 to 3,500 sq.ft, with a pre-launch offer starting at ₹3,200 per sq.ft. The layout is CMDA & RERA registered and is currently under development.",
+
+  {
+    "Property Type":"Premium Villa Plots",
+    "Project Area":"4.5 Acres",
+    "Plot Sizes":"500 - 3500 sq.ft",
+    "Pre-Launch Price":"₹3,200 / sq.ft onwards",
+    "Approval":"CMDA & RERA Registered Layout",
+    "Project Status":"Under Development",
+    "Location":"Pakkam, near Thiruninravur",
+    "Road Connectivity":"State Highway",
+    "From Thiruninravur":"4.7 km • Approximately 11 minutes",
+    "From Pakkam Junction":"1.5 km • Approximately 3 minutes"
+  },
+
+  "Pakkam, near Thiruninravur, Tamil Nadu"
+],
 ];
 
 let currentMode="Buy";
