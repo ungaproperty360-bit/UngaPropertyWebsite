@@ -281,6 +281,34 @@ const data=[
 
   "Pakkam, near Thiruninravur, Tamil Nadu"
 ],
+[
+  "Mahalakshmi Nagar – Premium Villa Plots",
+  "Natham Eedu (Pakkam), Thiruninravur, Thiruvallur District",
+  "Multiple Plot Sizes • Phase 1 & Phase 2",
+  "2800",
+  "/ sq.ft",
+  "images/properties/mahalakshmi-nagar-1.jpg",
+  "Buy",
+  [
+  "images/properties/mahalakshmi-nagar-1.jpg",
+  "images/properties/mahalakshmi-nagar-2.jpg",
+  "images/properties/mahalakshmi-nagar-3.jpg",
+  "images/properties/mahalakshmi-nagar-4.jpg"
+  ],
+  "Mahalakshmi Nagar offers premium residential villa plots across Phase 1 and Phase 2 at Natham Eedu, Pakkam. The project brochure highlights blacktop roads, CCTV cameras, LED streetlights, EB lines, compound walls, an entrance arch, stormwater drainage, parks and commercial spaces. Convenient connectivity to nearby bus stops, railway stations, colleges and major roads.",
+  {
+    "Property Type": "Residential Villa Plots",
+    "Project Name": "Mahalakshmi Nagar",
+    "Location": "Natham Eedu (Pakkam), Thiruvallur District",
+    "Project Phases": "Phase 1 & Phase 2",
+    "Price": "₹2,800 per sq.ft.",
+    "Plot Sizes": "Multiple sizes available; confirm current availability",
+    "Approvals": "CMDA and RERA approved, as stated in the supplied brochure",
+    "Roads": "Blacktop roads",
+    "Amenities": "CCTV, LED streetlights, EB lines, compound walls, entrance arch, stormwater drainage, parks and commercial spaces"
+  },
+  "Natham Eedu, Pakkam, Thiruvallur District"
+],
 ];
 
 let currentMode="Buy";
