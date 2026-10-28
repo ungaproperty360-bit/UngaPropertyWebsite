@@ -339,6 +339,35 @@ const data=[
   },
   "Pallavaram–Thoraipakkam, Chennai"
 ],
+ 
+[
+  "TVS Emerald Avalon",
+  "200 Ft Radial Road, Pallavaram, Chennai",
+  "2 & 3 BHK Apartments • 750–1,600 sq.ft.",
+  "99 Lakh",
+  " onwards",
+  "images/properties/tvs-emerald-avalon-1.jpg",
+  "Buy",
+  [
+    "images/properties/tvs-emerald-avalon-1.jpg",
+    "images/properties/tvs-emerald-avalon-2.jpg",
+    "images/properties/tvs-emerald-avalon-3.jpg",
+    "images/properties/tvs-emerald-avalon-4.jpg"
+  ],
+  "TVS Emerald Avalon is a residential apartment development by TVS Emerald located on 200 Ft Radial Road, Pallavaram, Chennai. The official TVS Emerald website lists 2 and 3 BHK apartments with sizes ranging from 750 to 1,600 sq.ft. The project offers access to major roads, Chennai International Airport, railway stations, schools, hospitals and employment hubs. Contact UngaProperty for current pricing, availability and site visit details.",
+  {
+    "Property Type": "Residential Apartments",
+    "Builder": "TVS Emerald",
+    "Configuration": "2 BHK & 3 BHK",
+    "Listed Apartment Sizes": "750–1,600 sq.ft.",
+    "Starting Price": "₹99 Lakh onwards",
+    "Project Location": "200 Ft Radial Road, Pallavaram, Chennai",
+    "Project Status": "Pre-launch, as listed on the official TVS Emerald website",
+    "RERA Number": "Confirm current registration details before publishing",
+    "Amenities": "Swimming Pool, Gymnasium, Clubhouse, Children's Play Area, Sports Facilities, Walking/Jogging Areas and Indoor Games"
+  },
+  "Pallavaram, Chennai"
+],
 ];
 
 let currentMode="Buy";
