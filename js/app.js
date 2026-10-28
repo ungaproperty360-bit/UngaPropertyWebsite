@@ -368,6 +368,36 @@ const data=[
   },
   "Pallavaram, Chennai"
 ],
+ 
+[
+  "Rajparis Blue Jewel",
+  "Muttukadu, East Coast Road (ECR), Chennai",
+  "Luxury 3 BHK Apartments • 2,221–2,984 sq.ft.",
+  "2 Cr",
+  " onwards",
+  "images/properties/rajparis-blue-jewel-1.jpg",
+  "Buy",
+  [
+    "images/properties/rajparis-blue-jewel-1.jpg",
+    "images/properties/rajparis-blue-jewel-2.jpg",
+    "images/properties/rajparis-blue-jewel-3.jpg",
+    "images/properties/rajparis-blue-jewel-4.jpg"
+  ],
+  "Rajparis Blue Jewel is an exclusive luxury apartment development by Rajparis Civil Constructions at Muttukadu on East Coast Road, Chennai. The project offers spacious 3 BHK residences with panoramic views of the sea, Muttukadu backwaters and Buckingham Canal. Residents can enjoy a rooftop swimming pool, gymnasium, steam room, yoga and exercise hall, open-sky lounge, children's play area and multipurpose hall.",
+  {
+    "Property Type": "Luxury Residential Apartments",
+    "Builder": "Rajparis Civil Constructions",
+    "Configuration": "3 BHK",
+    "Apartment Sizes": "2,221–2,984 sq.ft.",
+    "Starting Price": "₹2 Crore onwards",
+    "Total Units": "55 Residences",
+    "Building": "14 Residential Floors",
+    "RERA Number": "TN/35/Building/0225/2025",
+    "Amenities": "Rooftop Swimming Pool, Gym, Steam Room, Yoga/Exercise Hall, Open-Sky Lounge, Children's Play Area, Multipurpose Hall, EV Charging and CCTV Security",
+    "Address": "Survey No. 95/52, East Coast Road, Muttukadu, Chennai - 603112"
+  },
+  "Muttukadu, ECR, Chennai"
+],
 ];
 
 let currentMode="Buy";
