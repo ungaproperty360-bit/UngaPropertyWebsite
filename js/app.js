@@ -468,6 +468,34 @@ const data=[
   },
   "Thaiyur, OMR, Chennai"
 ],
+ 
+[
+  "Sunrise Oragadam – Residential Plots",
+  "Oragadam, Chennai",
+  "Residential Plots • 600–2,000 sq.ft.",
+  "22 Lakh",
+  " – 70 Lakh",
+  "images/properties/sunrise-oragadam-1.jpg",
+  "Buy",
+  [
+    "images/properties/sunrise-oragadam-1.jpg",
+    "images/properties/sunrise-oragadam-2.jpg",
+    "images/properties/sunrise-oragadam-3.jpg",
+    "images/properties/sunrise-oragadam-4.jpg"
+  ],
+  "Sunrise Oragadam is a plotted residential development spread across 60 acres, with approximately 1,225 plots. Plot sizes include 600, 1,500, 1,800 and 2,000 sq.ft. The supplied project details indicate prices from ₹22 lakh to ₹70 lakh, an indicative rate of ₹3,800 per sq.ft., and a 12,000 sq.ft. Roman-themed clubhouse. The project is described as ready to construct.",
+  {
+    "Property Type": "Residential Plots",
+    "Project Size": "60 Acres",
+    "Total Units": "1,225",
+    "Plot Sizes": "600, 1,500, 1,800 and 2,000 sq.ft.",
+    "Price Range": "₹22 lakh–₹70 lakh",
+    "Price per Sq.Ft.": "₹3,800",
+    "Clubhouse": "12,000 sq.ft. Roman-themed",
+    "Construction Status": "Ready to Construct"
+  },
+  "Oragadam, Chennai"
+],
 ];
 
 let currentMode="Buy";
