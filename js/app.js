@@ -309,6 +309,36 @@ const data=[
   },
   "Natham Eedu, Pakkam, Thiruvallur District"
 ],
+ 
+[
+  "NCC Urban Ivy Towers",
+  "Pallavaram–Thoraipakkam, 200 Ft Radial Road, Chennai",
+  "2 & 3 BHK Apartments • 1,217–1,810 sq.ft.",
+  "1.39 Cr",
+  " onwards",
+  "images/properties/ncc-urban-ivy-towers-1.jpg",
+  "Buy",
+  [
+    "images/properties/ncc-urban-ivy-towers-1.jpg",
+    "images/properties/ncc-urban-ivy-towers-2.jpg",
+    "images/properties/ncc-urban-ivy-towers-3.jpg",
+    "images/properties/ncc-urban-ivy-towers-4.jpg"
+  ],
+  "NCC Urban Ivy Towers is a residential apartment project on 200 Ft Radial Road, Pallavaram–Thoraipakkam, Chennai. The project spans approximately 8.25 acres with 7 towers and 924 residential units. Apartment options include 2 BHK and 3 BHK homes, with amenities including a swimming pool, gymnasium, clubhouse, jogging track, children's play area and multipurpose hall. Convenient access to the airport, railway stations, schools, hospitals and IT hubs.",
+  {
+    "Property Type": "Residential Apartments",
+    "Builder": "NCC Urban",
+    "Configuration": "2 BHK & 3 BHK",
+    "Project Area": "8.25 Acres",
+    "Total Units": "924",
+    "Total Towers": "7",
+    "Apartment Sizes": "1,217–1,810 sq.ft.",
+    "Starting Price": "₹1.39 Crore onwards",
+    "Amenities": "Swimming Pool, Gymnasium, Clubhouse, Jogging Track, Children's Play Area, Squash Court, Yoga/Aerobics and Multipurpose Hall",
+    "Location": "200 Ft Radial Road, Pallavaram–Thoraipakkam, Chennai"
+  },
+  "Pallavaram–Thoraipakkam, Chennai"
+],
 ];
 
 let currentMode="Buy";
