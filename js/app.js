@@ -435,6 +435,39 @@ const data=[
   },
   "Padur, OMR, Chennai"
 ],
+ 
+[
+  "Wonderla Thaiyur – Premium Residential Plots",
+  "Thaiyur, Thiruporur / Illalur, OMR, Chennai",
+  "Residential Plots • 750–2,100 sq.ft.",
+  "38.99 Lakh",
+  " – 77.99 Lakh",
+  "images/properties/wonderla-thaiyur-1.jpg",
+  "Buy",
+  [
+    "images/properties/wonderla-thaiyur-1.jpg",
+    "images/properties/wonderla-thaiyur-2.jpg",
+    "images/properties/wonderla-thaiyur-3.jpg",
+    "images/properties/wonderla-thaiyur-4.jpg"
+  ],
+  "Wonderla Thaiyur is marketed as a premium plotted residential development near the proposed Wonderla Chennai destination, in the Thaiyur–Thiruporur / Illalur area off OMR. The supplied project information describes a 47-acre development with approximately 950 plots, multiple plot sizes and a Victorian-themed clubhouse. Lifestyle features are described as including a swimming pool, landscaped parks, jogging tracks, fitness areas and a children's play area. Contact UngaProperty for current plot availability, pricing and site visits.",
+  {
+    "Property Type": "Premium Residential Plots",
+    "Project Name": "Wonderla Thaiyur",
+    "Location": "Thaiyur, Thiruporur / Illalur, OMR, Chennai",
+    "Project Area": "47 Acres",
+    "Total Units": "950 Plots",
+    "Plot Sizes": "750, 1,000, 1,200, 1,500 and 1,646–2,100 sq.ft.",
+    "Price Range": "₹38.99 Lakhs–₹77.99 Lakhs",
+    "Indicative Rate": "Approximately ₹5,200 per sq.ft.",
+    "Featured Clubhouse": "15,000 sq.ft. Victorian-themed clubhouse",
+    "Plot Categories": "Cottage, Villa, Bungalow, Mansion and Estate",
+    "Amenities": "Clubhouse, Swimming Pool, Landscaped Parks, Jogging Tracks, Fitness Areas and Children's Play Area",
+    "Launch Date": "Confirm with the developer",
+    "RERA Registration": "Verify before publishing"
+  },
+  "Thaiyur, OMR, Chennai"
+],
 ];
 
 let currentMode="Buy";
