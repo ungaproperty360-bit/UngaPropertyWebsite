@@ -398,6 +398,43 @@ const data=[
   },
   "Muttukadu, ECR, Chennai"
 ],
+ 
+[
+  "Godrej Azure",
+  "Padur, Old Mahabalipuram Road (OMR), Chennai",
+  "2, 3 & 4 BHK Apartments • 1,020–2,722 sq.ft.",
+  "78.49 Lakh",
+  " onwards",
+  "images/properties/godrej-azure-1.jpg",
+  "Buy",
+  [
+    "images/properties/godrej-azure-1.jpg",
+    "images/properties/godrej-azure-2.jpg",
+    "images/properties/godrej-azure-3.jpg",
+    "images/properties/godrej-azure-4.jpg"
+  ],
+  "Godrej Azure is a residential apartment development by Godrej Properties at Padur on Old Mahabalipuram Road (OMR), Chennai. The project offers 2 BHK, 3 BHK and 4 BHK duplex residences, with a range of apartment sizes and lifestyle amenities. It is located close to Siruseri SIPCOT IT Park, educational institutions, hospitals, shopping and major employment hubs along OMR. Prices and availability vary by configuration and project phase; contact UngaProperty for current details and a site visit.",
+  {
+    "Property Type": "Residential Apartments",
+    "Builder": "Godrej Properties",
+    "Location": "Padur, Old Mahabalipuram Road (OMR), Chennai",
+    "Project Area": "8.77 Acres",
+    "Total Units": "435",
+    "Towers": "6",
+    "Configurations": "2 BHK, 3 BHK & 4 BHK Duplex",
+    "Unit Sizes": "1,020–2,722 sq.ft.",
+    "2 BHK": "1,020–1,050 sq.ft. — from ₹78.49 Lakhs",
+    "3 BHK": "1,250–1,950 sq.ft. — from ₹96.49 Lakhs",
+    "4 BHK Duplex": "2,722 sq.ft. — from ₹2.10 Crores",
+    "Indicative Rate": "Approximately ₹7,500–₹8,300 per sq.ft.; verify by unit and phase",
+    "Clubhouse": "11,000 sq.ft.",
+    "Project Status": "Under Construction",
+    "RERA Number": "TNRERA/35/BLG/0354/2025",
+    "Amenities": "Swimming Pool, Gymnasium, Rooftop Sky Lounge, Landscaped Gardens, Indoor Games and Children's Play Area",
+    "Nearby Landmark": "Siruseri SIPCOT IT Park"
+  },
+  "Padur, OMR, Chennai"
+],
 ];
 
 let currentMode="Buy";
